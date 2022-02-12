@@ -1,5 +1,5 @@
-# 
+# My Portfolio
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/raymond96/pen/VwvMNop](https://codepen.io/raymond96/pen/VwvMNop).
+To view my portfolio page please visit: https://rahulraymond.github.io/
 
 
