@@ -1,7 +1,7 @@
 /* Custom properties/variables  */
 :root {
   --main-yellow: rgb(255, 255, 27);
-  --main-red: rgba(190, 49, 68,0.5);
+  --main-red: rgba(190, 49, 68, 0.623);
   --main-blue: #45567d;
   --main-gray: #000000;
 }
@@ -115,8 +115,19 @@ img {
   left: 0;
   width: 100%;
   background: var(--main-red);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+#logo{
+  flex: 1;
+  justify-content: flex-end;
+  margin-left: 10px;
+ }
+
+#logo-img{
+  width: 82px;
+  height: 72px;
 }
 
 .nav-list {
