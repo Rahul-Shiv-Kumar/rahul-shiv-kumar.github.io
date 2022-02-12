@@ -1,6 +1,6 @@
 /* Custom properties/variables  */
 :root {
-  --main-white: rgb(255, 255, 27);
+  --main-yellow: rgb(255, 255, 27);
   --main-red: rgba(190, 49, 68,0.5);
   --main-blue: #45567d;
   --main-gray: #000000;
@@ -73,7 +73,7 @@ body {
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-white);
+  color: var(--main-yellow);
 }
 
 h1,
@@ -97,7 +97,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-white);
+  color: var(--main-yellow);
 }
 
 img {
@@ -176,7 +176,7 @@ img {
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
+  border-bottom: 0.2rem solid var(--main-yellow);
 }
 
 @media (max-width: 28.75em) {
@@ -208,10 +208,18 @@ img {
 
 .project {
   background: var(--main-gray);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  
 }
 
+.project:hover{
+  transform: translateY(2px);
+  box-shadow: 7px 7px 3px rgba(167, 167, 167, 0.5);
+  transition: transform 0.3s ease-in;
+}
 .code {
   color: var(--main-gray);
   transition: color 0.3s ease-out;
@@ -228,7 +236,7 @@ img {
 }
 
 .project-image:hover{
-  filter: blur(1px);
+  filter: blur(0.5px);
 }
 
 .project-title {
@@ -306,7 +314,7 @@ img {
 }
 
 .contact-details:hover {
-  transform: translateY(8px);
+  transform: translateY(4px);
 }
 
 /* Footer */
@@ -333,4 +341,29 @@ footer i {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* Back to Top btn */
+#topUp {
+  width:60px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 100px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(255, 255, 255, 0.295); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  transition: width 0.5s ease-out;
+}
+
+#topUp:hover {
+  background-color: rgba(255, 250, 250, 0.61); /* Add a dark-grey background on hover */
+  width:80px;
+  transition: width 0.5s ease-in;
 }
