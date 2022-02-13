@@ -1,6 +1,6 @@
 /* Custom properties/variables  */
 :root {
-  --main-yellow: rgb(255, 255, 27);
+  --main-white:rgb(202, 202, 202);
   --main-red: rgba(190, 49, 68, 0.623);
   --main-blue: #45567d;
   --main-gray: #000000;
@@ -73,7 +73,7 @@ body {
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-yellow);
+  color: var(--main-white);
 }
 
 h1,
@@ -97,7 +97,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-yellow);
+  color: var(--main-white);
 }
 
 img {
@@ -173,7 +173,8 @@ img {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-red);
+  font-family: monospace;
+  color: rgb(255, 255, 212);
 }
 
 /* Projects section */
@@ -187,7 +188,7 @@ img {
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-yellow);
+  border-bottom: 0.2rem solid var(--main-white);
 }
 
 @media (max-width: 28.75em) {
@@ -259,6 +260,7 @@ img {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
+  color: yellowgreen;
 }
 
 .btn-show-all {
@@ -320,7 +322,7 @@ img {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  text-shadow: 1px 2px 1px #757575;
   transition: transform 0.3s ease-out;
 }
 
@@ -352,6 +354,10 @@ footer i {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.heart{
+  color: rgb(255, 6, 6);
 }
 
 /* Back to Top btn */
@@ -410,3 +416,78 @@ footer i {
   text-align: right;
   margin-right: 10px;
 }
+
+
+.bio{
+  width: 28em; 
+  text-align:center;
+}
+
+
+  :root {
+    --delay: 0;
+    --duration: 2s;
+    --iterations: 1;
+  }
+  /* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+  
+  
+  .intro,
+  .intro::after {
+    animation-delay: var(--animation-delay, 2s);
+    animation-iteration-count: var(--iterations, 1);
+    animation-duration: var(--duration, 2s);
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  .intro {
+    --animation-delay: var(--delay, 0);
+    --animation-duration: var(--duration, 7s);
+    --animation-iterations: var(--iterations, 1);
+    position: relative;
+    font-size: 8vw;
+    animation-name: clip-text;
+    color: var(--main-white);
+    white-space: nowrap;
+    cursor: default;
+  
+  }
+    
+  
+  
+  
+  @keyframes clip-text {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  
+  @keyframes text-revealer {
+    
+    0%, 50% {
+      transform-origin: 0 50%;
+    }
+    
+    60%, 100% {
+      transform-origin: 100% 50%;		
+    }
+  
+    
+    60% {
+      transform: scaleX(1);
+    }
+    
+    100% {
+      transform: scaleX(0);
+    }
+  }
+  
+
+
+
+
