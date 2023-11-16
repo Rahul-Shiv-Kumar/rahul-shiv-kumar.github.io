@@ -134,6 +134,7 @@ img {
 .nav-list {
   display: flex;
   margin-right: 2rem;
+  margin-top: auto;
 }
 
 @media (max-width: 28.75em) {
@@ -150,6 +151,7 @@ img {
   display: block;
   font-size: 2rem;
   padding: 1rem;
+  transition: background 0.3s linear;
 }
 
 .nav-list a:hover {
