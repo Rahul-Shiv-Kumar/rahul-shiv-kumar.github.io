@@ -148,8 +148,8 @@ img {
 
 .nav-list a {
   display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 .nav-list a:hover {
@@ -221,17 +221,17 @@ img {
 
 .project {
   background: var(--main-gray);
-  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transform: translateX(0);
-  transition: transform 0.3s ease-out;
-  
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
 }
 
 .project:hover{
   transform: translateY(2px);
-  box-shadow: 7px 7px 3px rgba(167, 167, 167, 0.5);
-  transition: transform 0.3s ease-in;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 .code {
   color: var(--main-gray);
@@ -389,7 +389,7 @@ footer i {
 #github{
   border: none; /* Remove borders */
   outline: none;
-  background-color: rgba(255, 255, 255, 0.295); 
+  background-color: rgba(255, 255, 255, 0.295);
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -420,7 +420,7 @@ footer i {
 
 
 .bio{
-  width: 28em; 
+  width: 100%;
   text-align:center;
 }
 
@@ -431,8 +431,8 @@ footer i {
     --iterations: 1;
   }
   /* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
-  
-  
+
+
   .intro,
   .intro::after {
     animation-delay: var(--animation-delay, 2s);
@@ -441,7 +441,7 @@ footer i {
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
   }
-  
+
   .intro {
     --animation-delay: var(--delay, 0);
     --animation-duration: var(--duration, 7s);
@@ -452,12 +452,12 @@ footer i {
     color: var(--main-white);
     white-space: nowrap;
     cursor: default;
-  
+
   }
-    
-  
-  
-  
+
+
+
+
   @keyframes clip-text {
     from {
       clip-path: inset(0 100% 0 0);
@@ -466,29 +466,24 @@ footer i {
       clip-path: inset(0 0 0 0);
     }
   }
-  
-  
+
+
   @keyframes text-revealer {
-    
+
     0%, 50% {
       transform-origin: 0 50%;
     }
-    
+
     60%, 100% {
-      transform-origin: 100% 50%;		
+      transform-origin: 100% 50%;
     }
-  
-    
+
+
     60% {
       transform: scaleX(1);
     }
-    
+
     100% {
       transform: scaleX(0);
     }
   }
-  
-
-
-
-
