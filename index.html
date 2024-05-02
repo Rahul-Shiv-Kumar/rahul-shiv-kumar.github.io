@@ -47,6 +47,24 @@
     </ul>
 
   </nav>
+ <!-- Mobile Navigation -->
+<div id="mobile-nav" class="mobile-nav">
+  <div class="nav-toggle" onclick="toggleNav()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <div class="nav-links">
+    <ul>
+      <li><a href="#welcome-section">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="./Rahul Shiv Kumar Resume.pdf" target="_blank">Resume</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
   <!-- END NAV -->
 
@@ -625,7 +643,18 @@ class="project project-tile"
   <!-- END FOOTER SECTION -->
   <script src="./js/main.js"></script>
   <!-- partial -->
+<script>
+  // Toggle mobile navigation
+// Toggle mobile navigation
+function toggleNav() {
+  var navLinks = document.querySelector('.nav-links');
+  var navToggle = document.querySelector('.nav-toggle');
+  navLinks.classList.toggle('active');
+  navToggle.classList.toggle('active');
+}
 
+
+</script>
 </body>
 
 </html>
