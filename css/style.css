@@ -146,6 +146,10 @@ img {
   .nav-list {
     margin: 0 1rem;
   }
+  .mobile-nav{
+    display: block !important;
+  }
+
 }
 
 .nav-list a {
@@ -163,6 +167,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
+  display: none;
 }
 
 .nav-toggle {
